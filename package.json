@@ -1,6 +1,6 @@
 {
   "name": "cluster-worker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The `cluster-worker` is a Node.js module designed to help you perform parallel processing using the built-in `cluster` module. This module allows you to run multiple worker processes simultaneously, enabling efficient use of CPU resources based on the node:cluster, node:os, node:process",
   "license": "MIT",
   "author": {

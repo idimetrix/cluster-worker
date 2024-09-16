@@ -23,6 +23,8 @@ npm install cluster-worker
 ### Usage
 
 ```typescript
+// Default: 
+
 import { parallelism } from 'cluster-worker';
 
 const task = async (index: number, total: number) => {
@@ -32,6 +34,48 @@ const task = async (index: number, total: number) => {
 };
 
 parallelism(task);
+```
+
+```typescript
+// 50% of CPUs: 
+
+import { parallelism } from 'cluster-worker';
+
+const task = async (index: number, total: number) => {
+    console.log(`Worker ${index} of ${total} is running.`);
+    
+    // Implement your task logic here
+};
+
+parallelism(task, 0.5);
+```
+
+```typescript
+// 200% of CPUs: 
+
+import { parallelism } from 'cluster-worker';
+
+const task = async (index: number, total: number) => {
+    console.log(`Worker ${index} of ${total} is running.`);
+    
+    // Implement your task logic here
+};
+
+parallelism(task, 2);
+```
+
+```typescript
+// 2 CPUs: 
+
+import { parallelism } from 'cluster-worker';
+
+const task = async (index: number, total: number) => {
+    console.log(`Worker ${index} of ${total} is running.`);
+    
+    // Implement your task logic here
+};
+
+parallelism(task, 1, 4);
 ```
 
 ## tsup
